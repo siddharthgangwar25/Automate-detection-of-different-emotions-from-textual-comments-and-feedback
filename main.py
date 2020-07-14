@@ -3,7 +3,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk import pos_tag,word_tokenize
 import re
-import numpy as np
+import numpas np
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer,TfidfTransformer
 from sklearn.model_selection import train_test_split
@@ -47,9 +47,9 @@ test_fin = open('data/val.txt','r')
 for line in test_fin:
     new_values = line.split(' ')
     new_test_out.append(new_values[-1].strip())
-    y = new_values[:-1]
-    y = [i for i in y if i not in stop]
-    new_test_inp.append(' '.join(y))
+    z = new_values[:-1]
+    z = [i for i in z if i not in stop]
+    new_test_inp.append(' '.join(z))
 test_fin.close()
 
 x_test,y_test=new_test_inp,new_test_out
